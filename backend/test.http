@@ -1,0 +1,98 @@
+### Test
+GET http://localhost:5000/
+
+### Register user/admin
+POST http://localhost:5000/api/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2MTA2ODIxMjIsImV4cCI6MTYxMTI4NjkyMn0.WfDg3M7Yp8_i_wMAM-382OmcFuUOAc0V5K34eapDxzw
+
+{
+    "name": "Abdur Rahim",
+    "email": "abdoerrahiem@gmail.com",
+    "password": "abdoerrahiem",
+    "isAdmin": false
+}
+
+### Login user
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "abdoerrahiem@gmail.com",
+    "password": "abdoerrahiem"
+}
+
+### Update user profile
+PUT http://localhost:5000/api/users/me
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjlhN2I2ODQ3MjRlOTAwMTc4YzQwNzkiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjA0Mjg3MTQyfQ.FHOQUEckHfsFIRuBScNaPca8HRy-4puybbqgb64o3xo
+
+{
+    "name": "Jessica Ahmad",
+    "username": "jessicaahmad",
+    "password": "jessicaahmad"
+}
+
+### Get all users
+GET http://localhost:5000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhYmRvZXJyYWhpZW1AZ21haWwuY29tIiwiaWF0IjoxNjEwNjc1OTQ4LCJleHAiOjE2MTEyODA3NDh9.Qd3Xs2T9-nHV-uWPPxwsquZkusFMT-WmZWFCuxhogQ4
+
+### Get user by id
+GET http://localhost:5000/api/users/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhYmRvZXJyYWhpZW1AZ21haWwuY29tIiwiaWF0IjoxNjEwNjc1OTQ4LCJleHAiOjE2MTEyODA3NDh9.Qd3Xs2T9-nHV-uWPPxwsquZkusFMT-WmZWFCuxhogQ4
+
+### Get current user
+GET http://localhost:5000/api/users/auth
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhYmRvZXJyYWhpZW1AZ21haWwuY29tIiwiaWF0IjoxNjEwNzAyMTA1LCJleHAiOjE2MTEzMDY5MDV9.zOwb1BOWitucBq2VHXnxpBc9en2SiSuxB-MYvI66HqQ
+
+### Delete user by id
+DELETE http://localhost:5000/api/users/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhYmRvZXJyYWhpZW1AZ21haWwuY29tIiwiaWF0IjoxNjEwNjc1OTQ4LCJleHAiOjE2MTEyODA3NDh9.Qd3Xs2T9-nHV-uWPPxwsquZkusFMT-WmZWFCuxhogQ4
+
+
+### Create candidate
+POST http://localhost:5000/api/candidates
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2MTA2ODIxMjIsImV4cCI6MTYxMTI4NjkyMn0.WfDg3M7Yp8_i_wMAM-382OmcFuUOAc0V5K34eapDxzw
+
+{
+    "nameOfChairman": "John Doe II",
+    "nameOfViceChairman": "Jane Doe II",
+    "birthdayOfChairman": "1995-01-15",
+    "birthdayOfViceChairman": "1999-02-13",
+    "addressOfChairman": "Pontianak, Indonesia",
+    "addressOfViceChairman": "Sambas, Indonesia"
+}
+
+### Get all candidates
+GET http://localhost:5000/api/candidates
+
+### Get candidate by id
+GET http://localhost:5000/api/candidates/3
+
+### Delete candidate
+DELETE http://localhost:5000/api/candidates/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhYmRvZXJyYWhpZW1AZ21haWwuY29tIiwiaWF0IjoxNjEwNjc1OTQ4LCJleHAiOjE2MTEyODA3NDh9.Qd3Xs2T9-nHV-uWPPxwsquZkusFMT-WmZWFCuxhogQ4
+
+### Update candidate
+PUT http://localhost:5000/api/candidates/5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhYmRvZXJyYWhpZW1AZ21haWwuY29tIiwiaWF0IjoxNjEwNjc1OTQ4LCJleHAiOjE2MTEyODA3NDh9.Qd3Xs2T9-nHV-uWPPxwsquZkusFMT-WmZWFCuxhogQ4
+
+{
+    "nameOfChairman": "John Doe updated",
+    "nameOfViceChairman": "Jane Doe updated",
+    "birthdayOfChairman": "1995-01-15",
+    "birthdayOfViceChairman": "1999-02-13",
+    "addressOfChairman": "Pontianak, Indonesia",
+    "addressOfViceChairman": "Sambas, Indonesia"
+}
+
+
+### Add vote 
+POST http://localhost:5000/api/votes/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2MTA2ODIxMjIsImV4cCI6MTYxMTI4NjkyMn0.WfDg3M7Yp8_i_wMAM-382OmcFuUOAc0V5K34eapDxzw
+
+### Get all votes
+GET http://localhost:5000/api/votes
+

@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.image-profile {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+
+form {
+  margin-top: 1.5rem;
+}
+
+form input,
+form textarea {
+  border: none;
+  outline: none;
+  background-color: #f0f2f5;
+  font-family: 'Quicksand', sans-serif;
+  width: 100%;
+}
+
+form i:not(:last-child) {
+  color: rgb(123, 117, 117);
+  margin-right: 0.5rem;
+}
+
+form > div {
+  background: #f0f2f5;
+  margin-bottom: 1.3rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 2rem;
+  width: 100%;
+}
+
+.alert {
+  padding: 1rem;
+  position: relative;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.alert.success {
+  background-color: #228b22;
+}
+
+.alert.error {
+  background-color: #dc143c;
+}
+
+.alert.none {
+  display: none;
+}
+
+.alert p {
+  color: #fff;
+  font-size: 0.8rem !important;
+  text-align: center;
+  margin: 0;
+}
+
+.alert .close-alert {
+  position: absolute;
+  right: 5px;
+  top: 2px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.badges {
+  width: 20px;
+  border-radius: 100%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.img-card {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal > div {
+  background-color: #fff;
+  height: 15rem;
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.modal p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.modal button {
+  border: none;
+  outline: none;
+  width: 7rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  color: #fff;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  opacity: 0.8;
+}
+
+.modal button:first-child {
+  background: #228b22;
+}
+
+.modal button:nth-child(2) {
+  background: #dc143c;
+}
+
+.modal .buttons {
+  text-align: center;
+}
+
+.modal > div > .close-alert {
+  position: absolute;
+  right: 47%;
+  top: -10px;
+  font-size: 1.5rem;
+  color: #fff;
+  background: #dc143c;
+  border-radius: 100%;
+  height: 1.5rem;
+  width: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.always-on-top {
+  position: sticky;
+  top: 80px;
+  margin-bottom: 5px;
+  z-index: 1;
+}
+
+.delete-icon {
+  color: #dc143c;
+  width: 18px;
+  cursor: pointer;
+}
